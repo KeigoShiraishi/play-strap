@@ -1,0 +1,38 @@
+@(title: String, moreStyles: Seq[String] = Nil, moreScripts: Seq[String] = Nil, initScript: Html = HtmlFormat.empty)(content: Html)
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Modern Business - Start Bootstrap Template</title>
+
+        <link href='@routes.Assets.versioned("bower_components/bootstrap/dist/css/bootstrap.css")' rel="stylesheet">
+        <link href='@routes.Assets.versioned("stylesheets/modern-business.css")' rel="stylesheet">
+        <link href='@routes.Assets.versioned("bower_components/Font-Awesome/css/font-awesome.css")' rel="stylesheet">
+
+        @stylesheets(moreStyles)
+
+    </head>
+    <body id="body">
+
+        @content
+
+        <script type="text/javascript" src='@routes.Assets.versioned("bower_components/jquery/dist/jquery.js")'></script>
+        <script type="text/javascript" src='@routes.Assets.versioned("bower_components/jqBootstrapValidation/jqBootstrapValidation.js")'></script>
+        <script type="text/javascript" src='@routes.Assets.versioned("bower_components/bootstrap/dist/js/bootstrap.js")'></script>
+
+        @javascripts(moreScripts)
+
+        <script type="text/javascript">
+                $(function () {
+                    @initScript
+                });
+        </script>
+
+    </body>
+</html>
