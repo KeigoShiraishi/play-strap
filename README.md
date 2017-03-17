@@ -1,6 +1,6 @@
 # This is template playframework project
 
-<img src="https://github.com/KeigoShiraishi/images/blob/master/startbootstrap-modern-business-about.png" alt="startbootstrap-modern-business-about.png" width="50%"><img src="https://github.com/KeigoShiraishi/images/blob/master/sb-admin2-black-style.png" alt="sb-admin2-black-style" width="50%">
+<img src="https://github.com/KeigoShiraishi/images/blob/master/sb-admin2-based-honoka-black.png" alt="sb-admin2-based-honoka-black.png" width="50%"><img src="https://github.com/KeigoShiraishi/images/blob/master/startbootstrap-modern-business.png" alt="startbootstrap-modern-business.png" width="50%">
 
 ### quick start
 ```

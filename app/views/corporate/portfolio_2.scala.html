@@ -1,11 +1,11 @@
 @(str:String)(implicit mesg: Messages, req: RequestHeader, lang: Lang)
 
-@main("",
+@views.html.corporate.main("",
     Seq(),
-    Seq(""),
+    Seq(),
     HtmlFormat.raw("")){
 
-    @nav("")
+    @views.html.corporate.nav("")
 
     <!-- Page Content -->
     <div class="container">
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-md-6 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src='@routes.Assets.versioned("images/corporate/700x400.png")' alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Project One</a>
@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-6 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src='@routes.Assets.versioned("images/corporate/700x400.png")' alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Project Two</a>
@@ -52,7 +52,7 @@
         <div class="row">
             <div class="col-md-6 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src='@routes.Assets.versioned("images/corporate/700x400.png")' alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Project Three</a>
@@ -61,7 +61,7 @@
             </div>
             <div class="col-md-6 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src='@routes.Assets.versioned("images/corporate/700x400.png")' alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Project Four</a>
@@ -75,7 +75,7 @@
         <div class="row">
             <div class="col-md-6 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src='@routes.Assets.versioned("images/corporate/700x400.png")' alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Project Five</a>
@@ -84,7 +84,7 @@
             </div>
             <div class="col-md-6 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src='@routes.Assets.versioned("images/corporate/700x400.png")' alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Project Six</a>
@@ -128,7 +128,7 @@
 
         <hr>
 
-    @footer("")
+    @views.html.corporate.footer("")
 
     </div>
     <!-- /.container -->

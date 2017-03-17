@@ -1,11 +1,11 @@
 @(str:String)(implicit mesg: Messages, req: RequestHeader, lang: Lang)
 
-@main("",
+@views.html.corporate.main("",
     Seq(),
-    Seq(""),
+    Seq(),
     HtmlFormat.raw("")){
 
-    @nav("")
+    @views.html.corporate.nav("")
 
     <!-- Page Content -->
     <div class="container">
@@ -40,13 +40,13 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img class="img-responsive" src="http://placehold.it/750x500" alt="">
+                            <img class="img-responsive" src='@routes.Assets.versioned("images/corporate/750x500.png")' alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="http://placehold.it/750x500" alt="">
+                            <img class="img-responsive" src='@routes.Assets.versioned("images/corporate/750x500.png")' alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="http://placehold.it/750x500" alt="">
+                            <img class="img-responsive" src='@routes.Assets.versioned("images/corporate/750x500.png")' alt="">
                         </div>
                     </div>
 
@@ -84,25 +84,25 @@
 
             <div class="col-sm-3 col-xs-6">
                 <a href="#">
-                    <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
+                    <img class="img-responsive img-hover img-related" src='@routes.Assets.versioned("images/corporate/500x300.png")' alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <a href="#">
-                    <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
+                    <img class="img-responsive img-hover img-related" src='@routes.Assets.versioned("images/corporate/500x300.png")' alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <a href="#">
-                    <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
+                    <img class="img-responsive img-hover img-related" src='@routes.Assets.versioned("images/corporate/500x300.png")' alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <a href="#">
-                    <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
+                    <img class="img-responsive img-hover img-related" src='@routes.Assets.versioned("images/corporate/500x300.png")' alt="">
                 </a>
             </div>
 
@@ -111,7 +111,7 @@
 
         <hr>
 
-    @footer("")
+    @views.html.corporate.footer("")
 
     </div>
     <!-- /.container -->

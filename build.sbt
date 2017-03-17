@@ -1,7 +1,6 @@
+name := """play-strap"""
 
-name := """play-framework-modern-business"""
-
-version := "1.0-SNAPSHOT"
+version := "0.0.1"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
@@ -11,6 +10,8 @@ libraryDependencies ++= Seq(
   jdbc,
   cache,
   ws,
+  filters,
+  "mysql" % "mysql-connector-java" % "5.1.40",
   "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test
 )
 

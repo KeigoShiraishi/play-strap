@@ -1,13 +1,13 @@
 @(str:String)(implicit mesg: Messages, req: RequestHeader, lang: Lang)
 
-@main("",
+@views.html.corporate.main("",
     Seq(),
-    Seq(""),
+    Seq(),
     HtmlFormat.raw("$('.carousel').carousel({interval: 5000})")){
 
-    @nav("")
+    @views.html.corporate.nav("")
 
-    @header("")
+    @views.html.corporate.header("")
 
     <!-- Page Content -->
     <div class="container">
@@ -62,32 +62,32 @@
             </div>
             <div class="col-md-4 col-sm-6">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                    <img class="img-responsive img-portfolio img-hover" src='@routes.Assets.versioned("images/corporate/700x450.png")' alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                    <img class="img-responsive img-portfolio img-hover" src='@routes.Assets.versioned("images/corporate/700x450.png")' alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                    <img class="img-responsive img-portfolio img-hover" src='@routes.Assets.versioned("images/corporate/700x450.png")' alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                    <img class="img-responsive img-portfolio img-hover" src='@routes.Assets.versioned("images/corporate/700x450.png")' alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                    <img class="img-responsive img-portfolio img-hover" src='@routes.Assets.versioned("images/corporate/700x450.png")' alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                    <img class="img-responsive img-portfolio img-hover" src='@routes.Assets.versioned("images/corporate/700x450.png")' alt="">
                 </a>
             </div>
         </div>
@@ -112,7 +112,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
             </div>
             <div class="col-md-6">
-                <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+                <img class="img-responsive" src='@routes.Assets.versioned("images/corporate/700x450.png")' alt="">
             </div>
         </div>
         <!-- /.row -->
@@ -133,7 +133,7 @@
 
         <hr>
 
-    @footer("")
+    @views.html.corporate.footer("")
 
     </div>
     <!-- /.container -->

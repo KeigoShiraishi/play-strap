@@ -2,23 +2,23 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET        /                           controllers.HomeController.index
-GET        /about                      controllers.HomeController.about
-GET        /service                    controllers.HomeController.service
-GET        /contact                    controllers.HomeController.contact
-GET        /portfolio-1                controllers.HomeController.portfolio_1
-GET        /portfolio-2                controllers.HomeController.portfolio_2
-GET        /portfolio-3                controllers.HomeController.portfolio_3
-GET        /portfolio-4                controllers.HomeController.portfolio_4
-GET        /portfolio-item             controllers.HomeController.portfolio_item
-GET        /blog-1                     controllers.HomeController.blog_1
-GET        /blog-2                     controllers.HomeController.blog_2
-GET        /blog-post                  controllers.HomeController.blog_post
-GET        /fullwidth                  controllers.HomeController.fullwidth
-GET        /sidebar                    controllers.HomeController.sidebar
-GET        /faq                        controllers.HomeController.faq
-GET        /error404                   controllers.HomeController.error404
-GET        /pricing                    controllers.HomeController.pricing
+GET        /                           controllers.CorporateController.index
+GET        /about                      controllers.CorporateController.about
+GET        /service                    controllers.CorporateController.service
+GET        /contact                    controllers.CorporateController.contact
+GET        /portfolio-1                controllers.CorporateController.portfolio_1
+GET        /portfolio-2                controllers.CorporateController.portfolio_2
+GET        /portfolio-3                controllers.CorporateController.portfolio_3
+GET        /portfolio-4                controllers.CorporateController.portfolio_4
+GET        /portfolio-item             controllers.CorporateController.portfolio_item
+GET        /blog-1                     controllers.CorporateController.blog_1
+GET        /blog-2                     controllers.CorporateController.blog_2
+GET        /blog-post                  controllers.CorporateController.blog_post
+GET        /fullwidth                  controllers.CorporateController.fullwidth
+GET        /sidebar                    controllers.CorporateController.sidebar
+GET        /faq                        controllers.CorporateController.faq
+GET        /error404                   controllers.CorporateController.error404
+GET        /pricing                    controllers.CorporateController.pricing
 
 GET        /admin/blank                controllers.AdminController.blank
 GET        /admin/buttons              controllers.AdminController.buttons
@@ -26,7 +26,7 @@ GET        /admin/flot                 controllers.AdminController.flot
 GET        /admin/forms                controllers.AdminController.forms
 GET        /admin/grid                 controllers.AdminController.grid
 GET        /admin/icons                controllers.AdminController.icons
-GET        /admin/                     controllers.AdminController.index
+GET        /admin                      controllers.AdminController.index
 GET        /admin/login                controllers.AdminController.login
 GET        /admin/morris               controllers.AdminController.morris
 GET        /admin/notifications        controllers.AdminController.notifications

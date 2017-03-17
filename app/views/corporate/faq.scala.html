@@ -1,11 +1,11 @@
 @(str:String)(implicit mesg: Messages, req: RequestHeader, lang: Lang)
 
-@main("",
+@views.html.corporate.main("",
     Seq(),
-    Seq(""),
+    Seq(),
     HtmlFormat.raw("")){
 
-    @nav("")
+    @views.html.corporate.nav("")
 
     <!-- Page Content -->
     <div class="container">
@@ -155,7 +155,7 @@
 
         <hr>
 
-    @footer("")
+    @views.html.corporate.footer("")
 
     </div>
     <!-- /.container -->
