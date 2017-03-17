@@ -1,14 +1,16 @@
-@(str:String)(implicit mesg: Messages, req: RequestHeader, lang: Lang)
+@(str: String)(implicit mesg: Messages, req: RequestHeader, lang: Lang)
 
 @views.html.admin.main("",
     Seq(),
-    Seq("bower_components/sb-admin2-based-honoka-black/data/morris-data.js"),
+    Seq("bower_components/sb-admin2-based-honoka-black/data/morris-data.js",
+        "bower_components/raphael/raphael.js",
+        "bower_components/morrisjs/morris.js"),
     HtmlFormat.raw("")) {
 
 
     <div id="wrapper">
 
-    @views.html.admin.nav("")
+        @views.html.admin.nav("")
 
         <div id="page-wrapper">
             <div class="row">
@@ -82,8 +84,10 @@
                         </div>
                             <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <p>Morris.js is a jQuery based charting plugin created by Olly Smith. In SB Admin, we are using the most recent version of Morris.js which includes the resize function, which makes the charts fully responsive. The documentation for Morris.js is available on their website, <a target="_blank" href="http://morrisjs.github.io/morris.js/">http://morrisjs.github.io/morris.js/</a>.</p>
-                            <a target="_blank" class="btn btn-default btn-lg btn-block" href="http://morrisjs.github.io/morris.js/">View Morris.js Documentation</a>
+                            <p>Morris.js is a jQuery based charting plugin created by Olly Smith. In SB Admin, we are using the most recent version of Morris.js which includes the resize function, which makes the charts fully responsive. The documentation for Morris.js is available on their website, <a target="_blank" href="http://morrisjs.github.io/morris.js/">
+                                http://morrisjs.github.io/morris.js/</a>.</p>
+                            <a target="_blank" class="btn btn-default btn-lg btn-block" href="http://morrisjs.github.io/morris.js/">
+                                View Morris.js Documentation</a>
                         </div>
                             <!-- /.panel-body -->
                     </div>
