@@ -37,3 +37,9 @@ click Button[Apply this script now!]
 - https://github.com/KeigoShiraishi/sb-admin2-based-honoka-black
 
 
+### Login
+    
+```
+email: hoge.fuga@foo.bar
+password: password
+```

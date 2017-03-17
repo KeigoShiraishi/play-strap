@@ -11,5 +11,8 @@ object LoginFormObj {
   val loginForm = Form(
     mapping(
       "email" -> nonEmptyText.verifying(CustomConstraints.emailAddress),
-      "password" -> nonEmptyText.verifying(CustomConstraints.passWordLight))(LoginForm.apply)(LoginForm.unapply))
+//      "password" -> nonEmptyText.verifying(CustomConstraints.passWordLight)
+      "password" -> nonEmptyText
+    )(LoginForm.apply)(LoginForm.unapply))
+
 }
