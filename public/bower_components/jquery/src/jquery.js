@@ -1,17 +1,18 @@
-define([
+define( [
 	"./core",
 	"./selector",
 	"./traversing",
 	"./callbacks",
 	"./deferred",
+	"./deferred/exceptionHook",
 	"./core/ready",
-	"./support",
 	"./data",
 	"./queue",
 	"./queue/delay",
 	"./attributes",
 	"./event",
 	"./event/alias",
+	"./event/focusin",
 	"./manipulation",
 	"./manipulation/_evalUrl",
 	"./wrap",
@@ -23,6 +24,7 @@ define([
 	"./ajax/script",
 	"./ajax/jsonp",
 	"./ajax/load",
+	"./event/ajax",
 	"./effects",
 	"./effects/animatedSelector",
 	"./offset",
@@ -32,6 +34,8 @@ define([
 	"./exports/global"
 ], function( jQuery ) {
 
+"use strict";
+
 return jQuery;
 
-});
+} );

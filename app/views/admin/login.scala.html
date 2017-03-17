@@ -1,0 +1,15 @@
+@(str: String)(implicit mesg: Messages, req: RequestHeader, lang: Lang)
+
+@views.html.admin.main("",
+    Seq(),
+    Seq(),
+    HtmlFormat.raw("")) {
+
+
+    <div id="wrapper">
+
+    @views.html.admin.nav("")
+
+    </div>
+
+}

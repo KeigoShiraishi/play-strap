@@ -14,8 +14,7 @@
         <link href='@routes.Assets.versioned("bower_components/bootstrap/dist/css/bootstrap.css")' rel="stylesheet">
         <link href='@routes.Assets.versioned("stylesheets/modern-business.css")' rel="stylesheet">
         <link href='@routes.Assets.versioned("bower_components/Font-Awesome/css/font-awesome.css")' rel="stylesheet">
-
-        @stylesheets(moreStyles)
+        @views.html.common.stylesheets(moreStyles)
 
     </head>
     <body id="body">
@@ -26,7 +25,7 @@
         <script type="text/javascript" src='@routes.Assets.versioned("bower_components/jqBootstrapValidation/jqBootstrapValidation.js")'></script>
         <script type="text/javascript" src='@routes.Assets.versioned("bower_components/bootstrap/dist/js/bootstrap.js")'></script>
 
-        @javascripts(moreScripts)
+        @views.html.common.javascripts(moreScripts)
 
         <script type="text/javascript">
                 $(function () {

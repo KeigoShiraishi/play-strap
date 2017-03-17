@@ -1,0 +1,51 @@
+{
+  "name": "sb-admin2-based-honoka-black",
+  "version": "0.0.1",
+  "keywords": [
+    "bootstrap",
+    "theme"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "pages",
+    "index.html",
+    "/js"
+  ],
+  "main": [
+    "dist/css/sb-admin-2.css",
+    "dist/css/sb-admin-2.min.css",
+    "dist/js/sb-admin-2.js",
+    "dist/js/sb-admin-2.min.js"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.7",
+    "datatables": "~1.10.4",
+    "datatables-plugins": "~1.0.1",
+    "flot": "~0.8.3",
+    "font-awesome": "~4.6.3",
+    "holderjs": "~2.4.1",
+    "metisMenu": "~1.1.3",
+    "morrisjs": "~0.5.1",
+    "datatables-responsive": "1.0.6",
+    "bootstrap-social": "~4.8.0",
+    "flot.tooltip": "~0.8.4"
+  },
+  "resolutions": {
+    "font-awesome": "~4.6.3"
+  },
+  "homepage": "https://github.com/KeigoShiraishi/sb-admin2-based-honoka-black",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "940162dd7da36db0ac9bc67f1de24649b94f0935"
+  },
+  "_source": "https://github.com/KeigoShiraishi/sb-admin2-based-honoka-black.git",
+  "_target": "0.0.1",
+  "_originalSource": "sb-admin2-based-honoka-black"
+}
