@@ -2,40 +2,45 @@ package controllers
 
 import javax.inject._
 
+import common.CodeAuthority.Administrator
+import common.{AuthConfigLike, CodeAuthority}
+import jp.t2v.lab.play2.auth.AuthElement
 import play.api.i18n.{I18nSupport, MessagesApi}
 import play.api.mvc._
+import services.AccountServiceLike
 
 import scala.concurrent.ExecutionContext
 
 @Singleton
-class AdminController @Inject()(val messagesApi: MessagesApi)
-                               (implicit executor: ExecutionContext) extends Controller with I18nSupport {
+class AdminController @Inject()(val userAccountService: AccountServiceLike,
+                                val messagesApi: MessagesApi)(implicit executor: ExecutionContext)
+  extends Controller with AuthElement with AuthConfigLike with I18nSupport {
 
-  def blank = Action { implicit request =>
+  def blank = StackAction(AuthorityKey -> Administrator) { implicit request =>
     Ok(views.html.admin.blank("Your new application is ready."))
   }
 
-  def buttons = Action { implicit request =>
+  def buttons = StackAction(AuthorityKey -> Administrator) { implicit request =>
     Ok(views.html.admin.buttons("Your new application is ready."))
   }
 
-  def flot = Action { implicit request =>
+  def flot = StackAction(AuthorityKey -> Administrator) { implicit request =>
     Ok(views.html.admin.flot("Your new application is ready."))
   }
 
-  def forms = Action { implicit request =>
+  def forms = StackAction(AuthorityKey -> Administrator) { implicit request =>
     Ok(views.html.admin.forms("Your new application is ready."))
   }
 
-  def grid = Action { implicit request =>
+  def grid = StackAction(AuthorityKey -> Administrator) { implicit request =>
     Ok(views.html.admin.grid("Your new application is ready."))
   }
 
-  def icons = Action { implicit request =>
+  def icons = StackAction(AuthorityKey -> Administrator) { implicit request =>
     Ok(views.html.admin.icons("Your new application is ready."))
   }
 
-  def index = Action { implicit request =>
+  def index = StackAction(AuthorityKey -> Administrator) { implicit request =>
     Ok(views.html.admin.index("Your new application is ready."))
   }
 
@@ -43,23 +48,23 @@ class AdminController @Inject()(val messagesApi: MessagesApi)
     Ok(views.html.admin.login("Your new application is ready."))
   }
 
-  def morris = Action { implicit request =>
+  def morris = StackAction(AuthorityKey -> Administrator) { implicit request =>
     Ok(views.html.admin.morris("Your new application is ready."))
   }
 
-  def notifications = Action { implicit request =>
+  def notifications = StackAction(AuthorityKey -> Administrator) { implicit request =>
     Ok(views.html.admin.notifications("Your new application is ready."))
   }
 
-  def panels_wells = Action { implicit request =>
+  def panels_wells = StackAction(AuthorityKey -> Administrator) { implicit request =>
     Ok(views.html.admin.panels_wells("Your new application is ready."))
   }
 
-  def tables = Action { implicit request =>
+  def tables = StackAction(AuthorityKey -> Administrator) { implicit request =>
     Ok(views.html.admin.tables("Your new application is ready."))
   }
 
-  def typography = Action { implicit request =>
+  def typography = StackAction(AuthorityKey -> Administrator) { implicit request =>
     Ok(views.html.admin.typography("Your new application is ready."))
   }
 

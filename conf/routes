@@ -2,37 +2,42 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET        /                           controllers.CorporateController.index
-GET        /about                      controllers.CorporateController.about
-GET        /service                    controllers.CorporateController.service
-GET        /contact                    controllers.CorporateController.contact
-GET        /portfolio-1                controllers.CorporateController.portfolio_1
-GET        /portfolio-2                controllers.CorporateController.portfolio_2
-GET        /portfolio-3                controllers.CorporateController.portfolio_3
-GET        /portfolio-4                controllers.CorporateController.portfolio_4
-GET        /portfolio-item             controllers.CorporateController.portfolio_item
-GET        /blog-1                     controllers.CorporateController.blog_1
-GET        /blog-2                     controllers.CorporateController.blog_2
-GET        /blog-post                  controllers.CorporateController.blog_post
-GET        /fullwidth                  controllers.CorporateController.fullwidth
-GET        /sidebar                    controllers.CorporateController.sidebar
-GET        /faq                        controllers.CorporateController.faq
-GET        /error404                   controllers.CorporateController.error404
-GET        /pricing                    controllers.CorporateController.pricing
+GET         /                           controllers.CorporateController.index
+GET         /about                      controllers.CorporateController.about
+GET         /service                    controllers.CorporateController.service
+GET         /contact                    controllers.CorporateController.contact
+GET         /portfolio-1                controllers.CorporateController.portfolio_1
+GET         /portfolio-2                controllers.CorporateController.portfolio_2
+GET         /portfolio-3                controllers.CorporateController.portfolio_3
+GET         /portfolio-4                controllers.CorporateController.portfolio_4
+GET         /portfolio-item             controllers.CorporateController.portfolio_item
+GET         /blog-1                     controllers.CorporateController.blog_1
+GET         /blog-2                     controllers.CorporateController.blog_2
+GET         /blog-post                  controllers.CorporateController.blog_post
+GET         /fullwidth                  controllers.CorporateController.fullwidth
+GET         /sidebar                    controllers.CorporateController.sidebar
+GET         /faq                        controllers.CorporateController.faq
+GET         /error404                   controllers.CorporateController.error404
+GET         /pricing                    controllers.CorporateController.pricing
 
-GET        /admin/blank                controllers.AdminController.blank
-GET        /admin/buttons              controllers.AdminController.buttons
-GET        /admin/flot                 controllers.AdminController.flot
-GET        /admin/forms                controllers.AdminController.forms
-GET        /admin/grid                 controllers.AdminController.grid
-GET        /admin/icons                controllers.AdminController.icons
-GET        /admin                      controllers.AdminController.index
-GET        /admin/login                controllers.AdminController.login
-GET        /admin/morris               controllers.AdminController.morris
-GET        /admin/notifications        controllers.AdminController.notifications
-GET        /admin/panels_wells         controllers.AdminController.panels_wells
-GET        /admin/tables               controllers.AdminController.tables
-GET        /admin/typography           controllers.AdminController.typography
+GET         /admin/blank                controllers.AdminController.blank
+GET         /admin/buttons              controllers.AdminController.buttons
+GET         /admin/flot                 controllers.AdminController.flot
+GET         /admin/forms                controllers.AdminController.forms
+GET         /admin/grid                 controllers.AdminController.grid
+GET         /admin/icons                controllers.AdminController.icons
+GET         /admin                      controllers.AdminController.index
+GET         /admin/login                controllers.AdminController.login
+GET         /admin/morris               controllers.AdminController.morris
+GET         /admin/notifications        controllers.AdminController.notifications
+GET         /admin/panels_wells         controllers.AdminController.panels_wells
+GET         /admin/tables               controllers.AdminController.tables
+GET         /admin/typography           controllers.AdminController.typography
+
+GET         /login                      controllers.LoginLogoutController.showLoginForm
+POST        /login                      controllers.LoginLogoutController.login
+POST        /logout                     controllers.LoginLogoutController.logout
+
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET         /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

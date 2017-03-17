@@ -8,12 +8,12 @@ import play.filters.csrf.CSRFFilter
 import play.filters.gzip.GzipFilter
 import play.filters.headers.SecurityHeadersFilter
 
-class CustomFilters @Inject()(env: Environment,
-                              log: CustomLogFilter,
-                              csrf: CSRFFilter,
-                              httpsfilter: HTTPSRedirectFilter,
-                              secure: SecurityHeadersFilter,
-                              gzipFilter: GzipFilter) extends HttpFilters {
+class CustomFilter @Inject()(env: Environment,
+                             log: CustomLogFilter,
+                             csrf: CSRFFilter,
+                             httpsfilter: HTTPSRedirectFilter,
+                             secure: SecurityHeadersFilter,
+                             gzipFilter: GzipFilter) extends HttpFilters {
 
   override val filters = {
     (env.mode == Mode.Dev) match {

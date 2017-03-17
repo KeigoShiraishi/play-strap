@@ -10,10 +10,10 @@ libraryDependencies ++= Seq(
   cache,
   ws,
   filters,
-
+  "com.h2database" % "h2" % "1.4.193",
   "mysql" % "mysql-connector-java" % "5.1.40",
-  // "org.postgresql" % "postgresql" % "9.4.1208",
-  //  "com.github.mumoshu" %% "play2-memcached-play24" % "0.7.0",
+  "org.postgresql" % "postgresql" % "9.4.1208",
+  //    "com.github.mumoshu" %% "play2-memcached-play24" % "0.7.0",
 
   "com.typesafe.play" %% "play-slick" % "2.0.2",
   "com.typesafe.play" %% "play-slick-evolutions" % "2.0.2",

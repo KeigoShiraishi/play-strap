@@ -29,7 +29,6 @@ click Button[Apply this script now!]
     - development support tool  
     you define table and run, then autogen rest source code.
 
-
 ### reference
 - https://github.com/t2v/play2-auth
 - https://github.com/BlackrockDigital/startbootstrap-modern-business
