@@ -32,7 +32,7 @@ click Button[Apply this script now!]
 
 ### reference
 - https://github.com/t2v/play2-auth
-- https://startbootstrap.com/template-overviews/modern-business
+- https://github.com/BlackrockDigital/startbootstrap-modern-business
 - https://github.com/windyakin/Honoka
 - https://github.com/BlackrockDigital/startbootstrap-sb-admin-2
 - https://github.com/KeigoShiraishi/sb-admin2-based-honoka-black
