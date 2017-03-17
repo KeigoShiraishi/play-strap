@@ -3,7 +3,14 @@
 @views.html.admin.main("",
     Seq(),
     Seq(),
-    HtmlFormat.raw("")) {
+    HtmlFormat.raw(
+      """
+        |   $('.tooltip-demo').tooltip({
+        |       selector: "[data-toggle=tooltip]",
+        |       container: "body"
+        |   })
+        |   $("[data-toggle=popover]").popover()
+      """.stripMargin)) {
 
 
     <div id="wrapper">

@@ -2,7 +2,14 @@
 
 @views.html.admin.main("",
     Seq(),
-    Seq(),
+    Seq("public/bower_components/flot/excanvas.js",
+        "public/bower_components/flot/jquery.flot.js",
+        "public/bower_components/flot/jquery.flot.pie.js",
+        "public/bower_components/flot/jquery.flot.resize.js",
+        "public/bower_components/flot/jquery.flot.time.js",
+        "public/bower_components/flot.tooltip/js/jquery.flot.tooltip.js",
+        "public/bower_components/sb-admin2-based-honoka-black/data/flot-data.js"
+    ),
     HtmlFormat.raw("")) {
 
 
