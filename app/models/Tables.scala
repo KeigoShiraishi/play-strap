@@ -9,6 +9,8 @@ object Tables extends {
 trait Tables {
   val profile: slick.driver.JdbcProfile
   import profile.api._
+  import com.github.tototoshi.slick.MySQLJodaSupport._
+  import org.joda.time.DateTime
   import slick.model.ForeignKeyAction
   // NOTE: GetResult mappers for plain SQL are only generated for tables where Slick knows how to map the types of all columns.
   import slick.jdbc.{GetResult => GR}
@@ -27,18 +29,20 @@ trait Tables {
    *  @param accountLanguage Database column account_language SqlType(VARCHAR), Length(255,true), Default(ja)
    *  @param accountEmail Database column account_email SqlType(VARCHAR), Length(255,true), Default(None)
    *  @param accountNickname Database column account_nickname SqlType(VARCHAR), Length(255,true), Default(None)
-   *  @param accountAuthorityId Database column account_authority_id SqlType(INT) */
-  case class AccountRow(accountId: Int, accountIdentificationName: String, accountPassword: String, accountPasswordSalt: String, accountTimezone: String = "Asia/Tokyo", accountLanguage: String = "ja", accountEmail: Option[String] = None, accountNickname: Option[String] = None, accountAuthorityId: Int)
+   *  @param accountAuthorityId Database column account_authority_id SqlType(INT)
+   *  @param accountCreateAt Database column account_create_at SqlType(TIMESTAMP)
+   *  @param accountUpdateAt Database column account_update_at SqlType(TIMESTAMP) */
+  case class AccountRow(accountId: Int, accountIdentificationName: String, accountPassword: String, accountPasswordSalt: String, accountTimezone: String = "Asia/Tokyo", accountLanguage: String = "ja", accountEmail: Option[String] = None, accountNickname: Option[String] = None, accountAuthorityId: Int, accountCreateAt: DateTime, accountUpdateAt: DateTime)
   /** GetResult implicit for fetching AccountRow objects using plain SQL queries */
-  implicit def GetResultAccountRow(implicit e0: GR[Int], e1: GR[String], e2: GR[Option[String]]): GR[AccountRow] = GR{
+  implicit def GetResultAccountRow(implicit e0: GR[Int], e1: GR[String], e2: GR[Option[String]], e3: GR[DateTime]): GR[AccountRow] = GR{
     prs => import prs._
-    AccountRow.tupled((<<[Int], <<[String], <<[String], <<[String], <<[String], <<[String], <<?[String], <<?[String], <<[Int]))
+    AccountRow.tupled((<<[Int], <<[String], <<[String], <<[String], <<[String], <<[String], <<?[String], <<?[String], <<[Int], <<[DateTime], <<[DateTime]))
   }
   /** Table description of table account. Objects of this class serve as prototypes for rows in queries. */
   class Account(_tableTag: Tag) extends Table[AccountRow](_tableTag, "account") {
-    def * = (accountId, accountIdentificationName, accountPassword, accountPasswordSalt, accountTimezone, accountLanguage, accountEmail, accountNickname, accountAuthorityId) <> (AccountRow.tupled, AccountRow.unapply)
+    def * = (accountId, accountIdentificationName, accountPassword, accountPasswordSalt, accountTimezone, accountLanguage, accountEmail, accountNickname, accountAuthorityId, accountCreateAt, accountUpdateAt) <> (AccountRow.tupled, AccountRow.unapply)
     /** Maps whole row to an option. Useful for outer joins. */
-    def ? = (Rep.Some(accountId), Rep.Some(accountIdentificationName), Rep.Some(accountPassword), Rep.Some(accountPasswordSalt), Rep.Some(accountTimezone), Rep.Some(accountLanguage), accountEmail, accountNickname, Rep.Some(accountAuthorityId)).shaped.<>({r=>import r._; _1.map(_=> AccountRow.tupled((_1.get, _2.get, _3.get, _4.get, _5.get, _6.get, _7, _8, _9.get)))}, (_:Any) =>  throw new Exception("Inserting into ? projection not supported."))
+    def ? = (Rep.Some(accountId), Rep.Some(accountIdentificationName), Rep.Some(accountPassword), Rep.Some(accountPasswordSalt), Rep.Some(accountTimezone), Rep.Some(accountLanguage), accountEmail, accountNickname, Rep.Some(accountAuthorityId), Rep.Some(accountCreateAt), Rep.Some(accountUpdateAt)).shaped.<>({r=>import r._; _1.map(_=> AccountRow.tupled((_1.get, _2.get, _3.get, _4.get, _5.get, _6.get, _7, _8, _9.get, _10.get, _11.get)))}, (_:Any) =>  throw new Exception("Inserting into ? projection not supported."))
 
     /** Database column account_id SqlType(INT), AutoInc, PrimaryKey */
     val accountId: Rep[Int] = column[Int]("account_id", O.AutoInc, O.PrimaryKey)
@@ -58,6 +62,10 @@ trait Tables {
     val accountNickname: Rep[Option[String]] = column[Option[String]]("account_nickname", O.Length(255,varying=true), O.Default(None))
     /** Database column account_authority_id SqlType(INT) */
     val accountAuthorityId: Rep[Int] = column[Int]("account_authority_id")
+    /** Database column account_create_at SqlType(TIMESTAMP) */
+    val accountCreateAt: Rep[DateTime] = column[DateTime]("account_create_at")
+    /** Database column account_update_at SqlType(TIMESTAMP) */
+    val accountUpdateAt: Rep[DateTime] = column[DateTime]("account_update_at")
 
     /** Uniqueness Index over (accountEmail) (database name account_account_email_uindex) */
     val index1 = index("account_account_email_uindex", accountEmail, unique=true)

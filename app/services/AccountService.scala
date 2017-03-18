@@ -28,7 +28,6 @@ class AccountService @Inject()(val accountRepo: AccountRepositoryLike,
 
   import AccountService._
 
-
   def findById(userId: Int): Future[Option[AccountRow]] = {
     accountRepo.findById(userId).map(userOpt =>
       userOpt.flatMap{ user =>
