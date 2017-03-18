@@ -1,4 +1,4 @@
-# This is template playframework project
+# play-strap
 
 <img src="https://github.com/KeigoShiraishi/images/blob/master/sb-admin2-based-honoka-black.png" alt="sb-admin2-based-honoka-black.png" width="50%"><img src="https://github.com/KeigoShiraishi/images/blob/master/startbootstrap-modern-business.png" alt="startbootstrap-modern-business.png" width="50%">
 
@@ -13,6 +13,9 @@ http://localhost:9000/
 click Button[Apply this script now!] 
 ```
 
+### description
+This project is playframework template having basic functions.
+
 ### function
 - login,logout
 - role
@@ -20,14 +23,14 @@ click Button[Apply this script now!]
 - admin-views
 - corporate-views
 
-### function(TBD)
-- autogen: rest
-- autogen: models
-
 ### cooperation
 - https://github.com/KeigoShiraishi/play-rest-codegen.git
-    - development support tool  
+    - description
+    development support tool  
     you define table and run, then autogen rest source code.
+    - function  
+    autogen: scaffold  
+    autogen: models
 
 ### reference
 - https://github.com/t2v/play2-auth
