@@ -27,7 +27,7 @@ This project is playframework template having basic functions.
 - https://github.com/KeigoShiraishi/play-rest-codegen.git
     - description  
     development support tool  
-    you define table and run, then autogen rest source code.
+    you define table and run, then autogen rest source code, db migrate, autogen models source code.
     - function  
     autogen: scaffold  
     autogen: models
