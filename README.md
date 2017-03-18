@@ -25,7 +25,7 @@ This project is playframework template having basic functions.
 
 ### cooperation
 - https://github.com/KeigoShiraishi/play-rest-codegen.git
-    - description
+    - description  
     development support tool  
     you define table and run, then autogen rest source code.
     - function  
