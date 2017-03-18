@@ -28,7 +28,7 @@ This project is playframework template having basic functions.
     - description  
     development support tool.  
     scaffolding -> db migrate -> autogen-models.  
-    we attend to scaffolding is customize-ful and interfere-less.
+    we attend to scaffolding is easy-customize and interfere-less.
     - function  
     autogen: scaffold  
     autogen: models
