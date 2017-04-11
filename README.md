@@ -2,6 +2,9 @@
 
 <img src="https://github.com/KeigoShiraishi/images/blob/master/sb-admin2-based-honoka-black.png" alt="sb-admin2-based-honoka-black.png" width="50%"><img src="https://github.com/KeigoShiraishi/images/blob/master/startbootstrap-modern-business.png" alt="startbootstrap-modern-business.png" width="50%">
 
+### Status
+now no working...
+
 ### quick start
 ```
 brew install typesafe-activator
@@ -22,16 +25,6 @@ This project is playframework template having basic functions.
 - crud
 - admin-views
 - corporate-views
-
-### cooperation
-- https://github.com/KeigoShiraishi/play-rest-codegen.git
-    - description  
-    development support tool.  
-    scaffolding -> db migrate -> autogen-models.  
-    we attend to scaffolding is easy-customize and interfere-less.
-    - function  
-    autogen: scaffold  
-    autogen: models
 
 ### reference
 - https://github.com/t2v/play2-auth
