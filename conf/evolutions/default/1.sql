@@ -10,6 +10,8 @@ CREATE TABLE `account` (
   `account_email` varchar(255) DEFAULT NULL,
   `account_nickname` varchar(255) DEFAULT NULL,
   `account_authority_id` int(11) NOT NULL,
+  `account_create_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `account_update_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`account_id`),
   UNIQUE KEY `account_account_identification_name_uindex` (`account_identification_name`),
   UNIQUE KEY `account_account_email_uindex` (`account_email`)
