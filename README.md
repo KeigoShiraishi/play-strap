@@ -3,7 +3,7 @@
 <img src="https://github.com/KeigoShiraishi/images/blob/master/sb-admin2-based-honoka-black.png" alt="sb-admin2-based-honoka-black.png" width="50%"><img src="https://github.com/KeigoShiraishi/images/blob/master/startbootstrap-modern-business.png" alt="startbootstrap-modern-business.png" width="50%">
 
 ### Status
-now no working...
+now no working..
 
 ### quick start
 ```
